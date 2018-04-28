@@ -17,5 +17,5 @@ Any contributions are welcome. Let's use the **Issues** to address new rulesets 
 ### Usage
 To install this package, go to your Magento 2 root and use the following:
 
-  composer config repositories:extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
-  composer require extdn/phpcs:dev-master
+    composer config repositories:extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
+    composer require extdn/phpcs:dev-master
