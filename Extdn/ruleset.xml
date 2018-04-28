@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ruleset name="Extdn">
+    <description>Magento 2 Additional Rules by ExtDN</description>
+    <rule ref="PSR1"/>
+    <rule ref="PSR1"/>
+    <rule ref="Extdn.Blocks.SetTemplateInBlock"/>
+</ruleset>
