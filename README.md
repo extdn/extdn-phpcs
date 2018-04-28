@@ -15,4 +15,7 @@ repository forms an effort to come up with more advanced rulesets than there cur
 Any contributions are welcome. Let's use the **Issues** to address new rulesets that are needed.
 
 ### Usage
-@todo
+To install this package, go to your Magento 2 root and use the following:
+
+  composer config repositories:extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
+  composer require extdn/phpcs:dev-master
