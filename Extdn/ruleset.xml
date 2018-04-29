@@ -2,6 +2,6 @@
 <ruleset name="Extdn">
     <description>Magento 2 Additional Rules by ExtDN</description>
     <rule ref="PSR1"/>
-    <rule ref="PSR1"/>
+    <rule ref="PSR2"/>
     <rule ref="Extdn.Blocks.SetTemplateInBlock"/>
 </ruleset>
