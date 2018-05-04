@@ -24,16 +24,16 @@ class SetTemplateInBlockSniff implements Sniff
     /**
      * @var array
      */
-    public $supportedTokenizers = array(
-        'PHP'
-    );
+    public $supportedTokenizers = [
+        'PHP',
+    ];
 
     /**
      * @return array|int[]
      */
     public function register()
     {
-        return array(T_CLASS);
+        return [T_CLASS];
     }
 
     /**
@@ -51,16 +51,10 @@ class SetTemplateInBlockSniff implements Sniff
             }
 
             $error = $this->message . ' Found: %s';
-            $data = array(trim($token['content']));
-            $data = $token;
-            $phpcsFile->addWarning($error, $line, 'Found', $data);
+            $phpcsFile->addWarning($error, $line, 'Found', $token);
         }
     }
 
-    /**
-     * @param array $token
-     * @return bool
-     */
     private function hasTokenMatch(array $token): bool
     {
         if ($token['content'] !== 'setTemplate') {
