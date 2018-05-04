@@ -25,6 +25,6 @@
     "scripts": {
         "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
         "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
-        "test": "\"vendor/bin/phpunit\" --filter Extdn"
+        "test": "vendor/bin/phpunit"
     }
 }

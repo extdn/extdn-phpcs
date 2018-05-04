@@ -5,4 +5,7 @@
             <file>../../../vendor/squizlabs/php_codesniffer/tests/Standards/AllSniffs.php</file>
         </testsuite>
     </testsuites>
+    <php>
+        <env name="PHPCS_IGNORE_TESTS" value="Generic,MySource,PEAR,PSR1,PSR2,Squiz,Zend"/>
+    </php>
 </phpunit>
