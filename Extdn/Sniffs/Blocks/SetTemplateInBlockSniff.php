@@ -24,9 +24,7 @@ class SetTemplateInBlockSniff implements Sniff
     /**
      * @var array
      */
-    public $supportedTokenizers = [
-        'PHP',
-    ];
+    public $supportedTokenizers = ['PHP'];
 
     /**
      * @return array|int[]

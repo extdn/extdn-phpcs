@@ -7,6 +7,7 @@ use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
 class SetTemplateInBlockUnitTest extends AbstractSniffUnitTest
 {
+
     /**
      * @inheritdoc
      */
@@ -20,8 +21,6 @@ class SetTemplateInBlockUnitTest extends AbstractSniffUnitTest
      */
     public function getWarningList()
     {
-        return [
-            8 => 1,
-        ];
+        return [8 => 1];
     }
 }
