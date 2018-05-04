@@ -5,7 +5,7 @@ namespace Extdn\Tests\Blocks;
 
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
-class NoSetTemplateInBlockTest extends AbstractSniffUnitTest
+class SetTemplateInBlockUnitTest extends AbstractSniffUnitTest
 {
     /**
      * @inheritdoc

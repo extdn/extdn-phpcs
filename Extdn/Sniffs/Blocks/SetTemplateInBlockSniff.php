@@ -55,8 +55,6 @@ class SetTemplateInBlockSniff implements Sniff
             $data = $token;
             $phpcsFile->addWarning($error, $line, 'Found', $data);
         }
-
-        print_r($tokens);exit;
     }
 
     /**
