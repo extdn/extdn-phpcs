@@ -30,12 +30,22 @@ As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extd
 
 ### Testing
 
-vendor/bin/phpcs --config-set installed_paths vendor/extdn/phpcs/Extdn
+### Within a Magento installation
 
-Tests can be run like this:
+To run the sniff unit tests from a main repository, where the rules are installed via composer, first configure phpcs to find the rules:
 
-    phpunit -c vendor/extdn/phpcs/phpunit.xml.dist vendor/extdn/phpcs/Extdn/Tests
+    vendor/bin/phpcs --config-set installed_paths vendor/extdn/phpcs/Extdn
+
+Then tests can be run like this:
+
+    phpunit -c vendor/extdn/phpcs/phpunit-vendor.xml vendor/extdn/phpcs/Extdn/Tests
+
+### In a standalone installation
+
+If you cloned the repository on its own for development:
+
+    composer install
+    composer test
 
 Each `Test.php` class should be accompanied by a `Test.inc` file to allow for unit testing based upon the PHPCS parent class `AbstractSniffUnitTest`.
 
-@todo: Currently not working

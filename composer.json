@@ -18,5 +18,13 @@
         "psr-4": {
             "Extdn\\": "Extdn/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.0"
+    },
+    "scripts": {
+        "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
+        "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
+        "test": "\"vendor/bin/phpunit\" --filter Extdn"
     }
 }
