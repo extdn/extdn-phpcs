@@ -41,42 +41,37 @@ class StrictTypesSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-
         $tokens = $phpcsFile->getTokens();
-
-
         $hasDeclareStrictTypes = false;
 
-        if ($tokens[$stackPtr]['code'] === T_DECLARE) {
-            $lineEnd = $phpcsFile->findNext([T_SEMICOLON], $stackPtr);
-            // extract all tokens between first declare and namespace start
-            $tokens = \array_slice($tokens, $stackPtr, $lineEnd - 1);
+        $declarePosition = $phpcsFile->findNext([T_DECLARE], 0);
+        if ($declarePosition !== false) {
+            $lineEnd = $phpcsFile->findNext([T_SEMICOLON], $declarePosition);
 
+            // extract all tokens between declare and line end
+            $tokens = \array_slice($tokens, $declarePosition, $lineEnd - 1);
             $hasDeclareStrictTypes = $this->hasDeclareStrictTypes($tokens);
         }
 
-        if($hasDeclareStrictTypes === false)
-        {
+        if ($hasDeclareStrictTypes === false) {
             $error = $this->message . 'Not Found:';
             $phpcsFile->addWarning($error, null, 'NotFound');
         }
-
     }
 
     /**
-     * Checks has the File a
+     * Checks has the File with strict_types=1
+     *
      * @param array $tokens
      * @param $start
      * @return bool
      */
     private function hasDeclareStrictTypes(array $tokens): bool
     {
-
         $containsStrictType = false;
         $isEnabled = false;
 
         foreach ($tokens as $token) {
-
             if ($token['code'] === T_STRING && $token['content'] === 'strict_types') {
                 $containsStrictType = true;
             }
