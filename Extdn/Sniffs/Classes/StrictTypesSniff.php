@@ -24,7 +24,7 @@ class StrictTypesSniff implements Sniff
     /**
      * @var string
      */
-    protected $message = 'Define declare(strict_types=1)';
+    protected $message = 'Define declare(strict_types=1).';
 
     /**
      * @return array|int[]
@@ -54,7 +54,7 @@ class StrictTypesSniff implements Sniff
         }
 
         if ($hasDeclareStrictTypes === false) {
-            $error = $this->message . 'Not Found:';
+            $error = $this->message . ' Not Found';
             $phpcsFile->addWarning($error, null, 'NotFound');
         }
     }
