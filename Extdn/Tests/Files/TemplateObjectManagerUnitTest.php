@@ -4,17 +4,17 @@
  */
 declare(strict_types=1);
 
-namespace Extdn\Tests\Classes;
+namespace Extdn\Tests\Files;
 
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 
-class StrictTypesUnitTest extends AbstractSniffUnitTest
+class TemplateObjectManagerUnitTest extends AbstractSniffUnitTest
 {
 
     /**
      * @inheritdoc
      */
-    public function getErrorList()
+    protected function getErrorList()
     {
         return [];
     }
@@ -22,12 +22,8 @@ class StrictTypesUnitTest extends AbstractSniffUnitTest
     /**
      * @inheritdoc
      */
-    public function getWarningList($testFile = '')
+    protected function getWarningList()
     {
-        if ($testFile === 'StrictTypesUnitTest.3.inc') {
-            return [];
-        }
-
         return [1 => 1];
     }
 }
