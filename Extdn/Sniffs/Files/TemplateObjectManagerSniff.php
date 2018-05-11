@@ -10,21 +10,26 @@ namespace Extdn\Sniffs\Files;
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
 
-/**
+/*
  * Class StrictTypesSniff
  * @package Extdn\Sniffs\Classes
  */
 class TemplateObjectManagerSniff implements Sniff
 {
 
-    private const TEMPLATE_EXTENSION_LIST = ['.phtml'];
+
+    public $templateExtensionList  = ['.phtml'];
+    /**
+     * @var string
+     */
+    protected $message = 'Define instead of using ObjectManager in Template.';
 
     /**
      * @inheritdoc
      */
     public function register()
     {
-       return [T_OPEN_TAG];
+        return [T_OPEN_TAG];
     }
 
     /**
@@ -32,6 +37,31 @@ class TemplateObjectManagerSniff implements Sniff
      */
     public function process(File $phpcsFile, $stackPtr)
     {
-        // TODO: Implement process() method.
+        $tokens = $phpcsFile->getTokens();
+        $fileName  = $phpcsFile->getFileName();
+        $extension = substr($fileName, strrpos($fileName, '.'));
+
+        if (\in_array($extension, $this->templateExtensionList, false) === false) {
+            return;
+        }
+
+        foreach ($tokens as $line => $token) {
+            if ($this->hasTokenMatch($token) === false) {
+                continue;
+            }
+
+            $error = $this->message . ' Found: %s';
+            $phpcsFile->addWarning($error, $line, 'Found', $token);
+        }
+    }
+
+
+    public function hasTokenMatch($token)
+    {
+        if ($token['content'] !== 'ObjectManager') {
+            return false;
+        }
+
+        return true;
     }
 }
