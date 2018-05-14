@@ -1,5 +1,7 @@
 # ExtDN PHP_CodeSniffer rules for Magento 2
 
+[![Build Status](https://travis-ci.org/extdn/extdn-phpcs.svg?branch=master)](https://travis-ci.org/extdn/extdn-phpcs)
+
 ### Introduction
 There are already many PHP CodeSniffer rules out there to aid in Magento 2 development:
 - https://github.com/magento/marketplace-eqp
