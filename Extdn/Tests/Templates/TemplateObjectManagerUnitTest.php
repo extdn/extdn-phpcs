@@ -16,7 +16,7 @@ class TemplateObjectManagerUnitTest extends AbstractSniffUnitTest
      */
     protected function getErrorList()
     {
-        return [];
+        return [3 => 1];
     }
 
     /**
@@ -24,6 +24,6 @@ class TemplateObjectManagerUnitTest extends AbstractSniffUnitTest
      */
     protected function getWarningList()
     {
-        return [3 => 1];
+        return [];
     }
 }

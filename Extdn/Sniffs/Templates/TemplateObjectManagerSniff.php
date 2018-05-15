@@ -12,7 +12,7 @@ use PHP_CodeSniffer\Sniffs\Sniff;
 
 /*
  * Class StrictTypesSniff
- * @package Extdn\Sniffs\Classes
+ * @package Extdn\Sniffs\Templates
  */
 class TemplateObjectManagerSniff implements Sniff
 {
@@ -22,7 +22,7 @@ class TemplateObjectManagerSniff implements Sniff
     /**
      * @var string
      */
-    protected $message = 'Define instead of using ObjectManager in Template.';
+    protected $message = 'Define dependencies in block or view model instead of using ObjectManager in the template.';
 
     /**
      * @inheritdoc
@@ -51,7 +51,7 @@ class TemplateObjectManagerSniff implements Sniff
             }
 
             $error = $this->message . ' Found: %s';
-            $phpcsFile->addWarning($error, $line, 'Found', $token);
+            $phpcsFile->addError($error, $line, 'Found', $token);
         }
     }
 
