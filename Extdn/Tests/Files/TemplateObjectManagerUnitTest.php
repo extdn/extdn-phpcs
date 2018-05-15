@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © ExtDN. All rights reserved.
+ */
+declare(strict_types=1);
+
+namespace Extdn\Tests\Files;
+
+use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
+
+class TemplateObjectManagerUnitTest extends AbstractSniffUnitTest
+{
+
+    /**
+     * @inheritdoc
+     */
+    protected function getErrorList()
+    {
+        return [];
+    }
+
+    /**
+     * @inheritdoc
+     */
+    protected function getWarningList()
+    {
+        return [2 => 1];
+    }
+}

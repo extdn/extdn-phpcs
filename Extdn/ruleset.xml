@@ -4,4 +4,6 @@
     <rule ref="PSR1"/>
     <rule ref="PSR2"/>
     <rule ref="Extdn.Blocks.SetTemplateInBlock"/>
+    <rule ref="Extdn.Classes.StrictTypes"/>
+    <rule ref="Extdn.Files.TemplateObjectManager"/>
 </ruleset>
