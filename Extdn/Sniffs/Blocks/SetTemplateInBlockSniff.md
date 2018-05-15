@@ -7,14 +7,19 @@ allows for the XML layout to change the template. The template in the Block clas
 if the XML layout is not overriding the template: This default value is best defined via a protected variable
 `$_template`. 
 
+## Reasoning
+
 If `$this->setTemplate()` is used instead, this could lead to potential issues: First of all, setters are deprecated in
 Block classes (because constructor arguments should be preferred instead). Second, if `$this->setTemplate()` is added to
 the constructor *after* calling upon the parent constructor, it would undo the configuration via XML layout. Simply put:
 It is outdated and leads to issues quickly.
 
-## Rule check
-This rule checks whether a Block classes used `$this->setTemplate()`. If there is a match, the preferred way of optimizing
-your code would be as follows:
+## How it works
+This rule checks whether a Block class uses `$this->setTemplate()`.
+
+## How to fix
+
+If there is a match, the preferred way of optimizing your code would be as follows:
 
     class MyBlock extends Template
     {
