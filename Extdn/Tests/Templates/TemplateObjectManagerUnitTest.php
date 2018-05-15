@@ -4,7 +4,7 @@
  */
 declare(strict_types=1);
 
-namespace Extdn\Tests\Files;
+namespace Extdn\Tests\Templates;
 
 use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
 

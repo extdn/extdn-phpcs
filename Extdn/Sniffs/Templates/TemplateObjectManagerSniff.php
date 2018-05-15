@@ -5,7 +5,7 @@
 
 declare(strict_types=1);
 
-namespace Extdn\Sniffs\Files;
+namespace Extdn\Sniffs\Templates;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
