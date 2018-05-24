@@ -15,7 +15,7 @@ repository forms an effort to come up with more advanced rulesets than there cur
 ### Usage
 To install this package, go to your Magento 2 root and use the following:
 
-    composer config repositories:extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
+    composer config repositories.extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
     composer require extdn/phpcs:dev-master
 
 Once installed, you can run PHPCS from the command-line to analyse your code `XYZ`:
