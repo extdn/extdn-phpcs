@@ -13,9 +13,10 @@ templates, not using `setTemplate` in Blocks and using namespaced classes for Vi
 repository forms an effort to come up with more advanced rulesets than there currently are.
 
 ### Usage
+
 To install this package, go to your Magento 2 root and use the following:
 
-    composer config repositories:extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
+    composer config repositories.extdn-phpcs vcs git@github.com:extdn/extdn-phpcs.git
     composer require extdn/phpcs:dev-master
 
 Once installed, you can run PHPCS from the command-line to analyse your code `XYZ`:
@@ -24,6 +25,7 @@ Once installed, you can run PHPCS from the command-line to analyse your code `XY
     vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/XYZ
 
 ### Contributions
+
 Any contributions are welcome. Add a new issue under **Issues** to address new rulesets that are needed or report other issues.
 
 As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extdn/Sniffs/Blocks`. It can be tested upon a sample file under `Extdn/Samples/Blocks`:
