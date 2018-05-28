@@ -35,8 +35,8 @@
     },
     "repositories": {
         "meqp": {
-            "type": "vcs",
-            "url": "git@github.com:magento/marketplace-eqp.git"
+            "type": "git",
+            "url": "https://github.com/magento/marketplace-eqp.git"
         }
     }
 }
