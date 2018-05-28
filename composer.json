@@ -12,7 +12,8 @@
     ],
     "require": {
         "php": ">=7.1.0",
-        "squizlabs/php_codesniffer": "3.*"
+        "squizlabs/php_codesniffer": "3.*",
+        "magento/marketplace-eqp": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -31,5 +32,11 @@
         "post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
         "post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths ../../..",
         "test": "vendor/bin/phpunit"
+    },
+    "repositories": {
+        "meqp": {
+            "type": "vcs",
+            "url": "git@github.com:magento/marketplace-eqp.git"
+        }
     }
 }

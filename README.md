@@ -38,7 +38,7 @@ As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extd
 
 To run the sniff unit tests from a main repository, where the rules are installed via composer, first configure phpcs to find the rules:
 
-    vendor/bin/phpcs --config-set installed_paths vendor/extdn/phpcs/Extdn
+    vendor/bin/phpcs --config-set installed_paths vendor/extdn/phpcs/Extdn,vendor/magento/marketplace-eqp/MEQP2
 
 Then tests can be run like this:
 
