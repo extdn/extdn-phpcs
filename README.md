@@ -51,5 +51,5 @@ If you cloned the repository on its own for development:
     composer install
     composer test
 
-Each `Test.php` class should be accompanied by a `Test.inc` file to allow for unit testing based upon the PHPCS parent class `AbstractSniffUnitTest`.
+Each `Test.php` class should be accompanied by a `Test.inc` file to allow for unit testing based upon the PHPCS parent class `AbstractSniffUnitTest`. Make sure to include a `Test.md` Markdown description which addresses the issue at hand, explains what the rule check for and then also suggests the improvement to be made.
 
