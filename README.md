@@ -32,6 +32,16 @@ As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extd
 
     vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/extdn/phpcs/Extdn/Samples
 
+#### Labels
+
+Some important labels, used for Github issues:
+
+- accepted: The rule is accepted by extdn. If nobody claimed it yet, you may start working on it
+- experimental: The rule can be implemented as well, but we will try it out with a low severity first before integrating it into the official ruleset
+- non-PHPCS: The rule is not feasibly implementable with phpcs, will need additional tools. We keep it for later.
+- organizational: Non-code related issues
+- on agenda of hangout: The rule/issue will be discussed in the next community hangout
+
 ### Testing
 
 ### Within a Magento installation
