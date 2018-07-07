@@ -25,9 +25,15 @@ Once installed, you can run PHPCS from the command-line to analyse your code `XY
 
 ### Contributions
 
-Any contributions are welcome. Add a new issue under **Issues** to address new rulesets that are needed or report other issues.
+Any contributions are welcome. However, dont start coding just yet. Make sure first that the work is going to be worth the effort.
 
-As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extdn/Sniffs/Blocks`. It can be tested upon a sample file under `Extdn/Samples/Blocks`:
+1) Add a new issue under **Issues** to address new rulesets that are needed or report other issues.
+
+2) Once the creation of the new rule has been accepted by adding a label `Accepted` under **Issues**, we're good to go.
+
+3) If a similar rule already exists in the Magento ECG standards and/or Magento Marketplace standards, simply try to include this rule within the ExtDN ruleset.
+
+4) If no rule exists yet, let's create it. As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extdn/Sniffs/Blocks`. It can be tested upon a sample file under `Extdn/Samples/Blocks`:
 
     vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/extdn/phpcs/Extdn/Samples
 
@@ -35,11 +41,11 @@ As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extd
 
 Some important labels, used for Github issues:
 
-- accepted: The rule is accepted by extdn. If nobody claimed it yet, you may start working on it
-- experimental: The rule can be implemented as well, but we will try it out with a low severity first before integrating it into the official ruleset
-- non-PHPCS: The rule is not feasibly implementable with phpcs, will need additional tools. We keep it for later.
-- organizational: Non-code related issues
-- on agenda of hangout: The rule/issue will be discussed in the next community hangout
+- `accepted`: The rule is accepted by extdn. If nobody claimed it yet, you may start working on it
+- `experimental`: The rule can be implemented as well, but we will try it out with a low severity first before integrating it into the official ruleset
+- `non-PHPCS`: The rule is not feasibly implementable with phpcs, will need additional tools. We keep it for later.
+- `organizational`: Non-code related issues
+- `on agenda of hangout`: The rule/issue will be discussed in the next community hangout
 
 ### Testing
 
