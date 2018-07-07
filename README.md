@@ -35,7 +35,9 @@ Any contributions are welcome. However, dont start coding just yet. Make sure fi
 
 4) If no rule exists yet, let's create it. As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extdn/Sniffs/Blocks`. It can be tested upon a sample file under `Extdn/Samples/Blocks`:
 
-    vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/extdn/phpcs/Extdn/Samples
+```bash
+vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/extdn/phpcs/Extdn/Samples
+```
 
 #### Labels
 
