@@ -46,6 +46,9 @@ Any contribution is welcome. However, don't start coding just yet. Make sure fir
 vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/extdn/phpcs/Extdn/Samples
 ```
 
+5) Once this all works, feel free to create a Pull Request (PR) including the addition of this rule to the `ruleset.xml` file.
+
+
 ### Using labels with GitHub issues
 Some important labels, used for Github issues:
 
