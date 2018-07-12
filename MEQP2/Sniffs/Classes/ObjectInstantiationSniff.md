@@ -135,7 +135,7 @@ class RingFactory
 }
 ```
 
-In this factory, we still won't use the `new` keyword, but instead the object manager can be used (this is an exception to the rule "Never use the object manager directly"!)
+In this factory, we still won't use the `new` keyword, but instead the object manager can be used (**factories are an exception to the rule "Never use the object manager directly"!**)
 
 ```php
 namespace Lotr;
@@ -165,6 +165,9 @@ class RingFactory
     }
 }
 ```
+
+**Do not use the object manager like this in anything else than factory or builder classes!** In other words, object
+creation and object usage must be separated.
 
 The signature of `ObjectManager::create()` is similar to the `create()` method of the automatically generated factories,
 but additionally needs a class or interface name as first argument.
