@@ -3,5 +3,10 @@
     <description>Magento 2 Additional Rules by ExtDN</description>
     <rule ref="PSR1"/>
     <rule ref="PSR2"/>
+    <rule ref="MEQP2.Templates.ThisInTemplate">
+        <exclude-pattern>*.php</exclude-pattern>
+    </rule>
     <rule ref="Extdn.Blocks.SetTemplateInBlock"/>
+    <rule ref="Extdn.Classes.StrictTypes"/>
+    <rule ref="Extdn.Templates.TemplateObjectManager"/>
 </ruleset>

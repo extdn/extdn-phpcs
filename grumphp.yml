@@ -1,0 +1,14 @@
+parameters:
+    git_dir: .
+    bin_dir: vendor/bin
+    tasks:
+#        infection: ~
+        phpcs: ~
+        phplint: ~
+        phpstan:
+            autoload_file: vendor/squizlabs/php_codesniffer/autoload.php
+            ignore_patterns: [Extdn/Samples]
+        phpunit: ~
+        phpversion: ~
+        xmllint: ~
+        yamllint: ~
