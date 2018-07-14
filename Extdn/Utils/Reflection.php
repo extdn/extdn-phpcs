@@ -17,7 +17,7 @@ class Reflection
     /**
      * @param string $className
      *
-     * @return array
+     * @return ReflectionClass[]
      */
     static public function getClassDependencies(string $className): array
     {
@@ -40,7 +40,7 @@ class Reflection
                     continue;
                 }
 
-                $dependencyClasses[] = $dependencyClass->getName();
+                $dependencyClasses[] = $dependencyClass;
             }
 
             return $dependencyClasses;

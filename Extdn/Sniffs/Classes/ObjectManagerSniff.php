@@ -51,11 +51,11 @@ class ObjectManagerSniff implements Sniff
                 continue;
             }
 
-            if (!$this->isInstanceOfObjectManager($dependencyClass)) {
+            if (!$this->isInstanceOfObjectManager($dependencyClass->getName())) {
                 continue;
             }
 
-            $warning = 'The dependency "\\' . $dependencyClass . '" is not allowed here.';
+            $warning = 'The dependency "\\' . $dependencyClass->getName() . '" is not allowed here.';
             $phpcsFile->addWarning($warning, null, 'warning');
         }
     }
