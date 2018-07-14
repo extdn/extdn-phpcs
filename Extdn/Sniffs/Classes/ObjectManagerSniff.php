@@ -1,4 +1,8 @@
 <?php
+/**
+ * Copyright © ExtDN. All rights reserved.
+ */
+
 declare(strict_types=1);
 
 namespace Extdn\Sniffs\Classes;
@@ -38,9 +42,8 @@ class ObjectManagerSniff implements Sniff
             return false;
         }
 
-        if (TestPattern::isTestClass($className)) {
-            return false;
-        }
+        // Make sure to load the file itself, so that autoloading can be skipped
+        include_once($phpcsFile->getFilename());
 
         $dependencyClasses = Reflection::getClassDependencies($className);
         foreach ($dependencyClasses as $dependencyClass) {
@@ -53,7 +56,7 @@ class ObjectManagerSniff implements Sniff
             }
 
             $warning = 'The dependency "\\' . $dependencyClass . '" is not allowed here.';
-            $phpcsFile->addWarning($warning, 0, get_class($this), [], 8);
+            $phpcsFile->addWarning($warning, null, 'warning');
         }
     }
 
@@ -82,7 +85,7 @@ class ObjectManagerSniff implements Sniff
      */
     private function isInstanceOfObjectManager(string $className): bool
     {
-        if (strstr($className, '\\ObjectManager')) {
+        if (strstr($className, 'ObjectManager')) {
             return true;
         }
 

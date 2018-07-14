@@ -15,6 +15,10 @@ use PHP_CodeSniffer\Tests\Standards\AbstractSniffUnitTest;
  */
 class ObjectManagerUnitTest extends AbstractSniffUnitTest
 {
+    protected function setUp()
+    {
+        parent::setUp();
+    }
 
     /**
      * @inheritdoc
@@ -29,7 +33,7 @@ class ObjectManagerUnitTest extends AbstractSniffUnitTest
      */
     public function getWarningList($testFile = '')
     {
-        if ($testFile === 'ObjectManagerUnitTest.3.inc') {
+        if ($testFile === 'ObjectManagerUnitTest.2.inc') {
             return [];
         }
 
