@@ -21,6 +21,7 @@ To install this package, go to your Magento 2 root and use the following:
 If this fails because the dependency with `magento/marketplace-eqp` fails to load, first add the EQP repo to your configuration and then repeat:
 
     composer config repositories.magento-marketplace-eqp vcs https://github.com/magento/marketplace-eqp
+    composer require magento/marketplace-eqp:dev-master
     composer require extdn/phpcs:dev-master
 
 Once installed, you can run PHPCS from the command-line to analyse your code `XYZ`:
