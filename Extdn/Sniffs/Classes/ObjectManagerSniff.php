@@ -9,13 +9,12 @@ namespace Extdn\Sniffs\Classes;
 
 use PHP_CodeSniffer\Files\File;
 use PHP_CodeSniffer\Sniffs\Sniff;
-use Extdn\Utils\TestPattern;
 use Extdn\Utils\Reflection;
 
 /**
  * Class ObjectManagerSniff
  *
- * @package Extdn\Sniffs\Classes\Constructor
+ * @package Extdn\Sniffs\Classes
  */
 class ObjectManagerSniff implements Sniff
 {
