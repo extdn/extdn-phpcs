@@ -8,7 +8,8 @@ env:
     - COMPOSER_PREF="--prefer-lowest"
     - COMPOSER_PREF=""
 before_install:
-  - openssl aes-256-cbc -K $encrypted_2b7e0505597a_key -iv $encrypted_2b7e0505597a_iv -in .travis/deploy_rsa_encrypted -out ~/.ssh/id_rsa -d
+  - mkdir -p ~/.travis
+  - openssl aes-256-cbc -K $encrypted_2b7e0505597a_key -iv $encrypted_2b7e0505597a_iv -in ~/.travis/deploy_rsa_encrypted -out ~/.ssh/id_rsa -d
   - chmod 600 ~/.ssh/id_rsa
 install: composer update --no-interaction --prefer-source $COMPOSER_PREF
 script:
