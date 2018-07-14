@@ -8,5 +8,6 @@
     </rule>
     <rule ref="Extdn.Blocks.SetTemplateInBlock"/>
     <rule ref="Extdn.Classes.StrictTypes"/>
+    <rule ref="Extdn.Classes.ObjectManager"/>
     <rule ref="Extdn.Templates.TemplateObjectManager"/>
 </ruleset>
