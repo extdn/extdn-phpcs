@@ -63,14 +63,16 @@ class DeprecatedParentsSniff implements Sniff
      */
     private function getDeprecatedClasses(): array
     {
+        $url = 'https://github.com/extdn/extdn-phpcs/blob/master/Extdn/Sniffs/Blocks/DeprecatedParentsSniff.md';
+
         return [
             [
                 'class' => 'Magento\Backend\Block\Widget\Form\Generic',
-                'advice' => 'Refactor this to a UiComponent.'
+                'advice' => 'See '.$url
             ],
             [
                 'class' => 'Magento\Backend\Block\Widget\Grid\Container',
-                'advice' => 'Refactor this to a UiComponent.'
+                'advice' => 'See '.$url
             ]
         ];
     }
