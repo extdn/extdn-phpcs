@@ -22,7 +22,7 @@ class DeprecatedParentsSniff implements Sniff
     /**
      * @var string
      */
-    protected $message = 'The ObjectManager should not be injected into the constructor';
+    protected $message = 'A Block class should not extend from deprecated parents';
 
     /**
      * @inheritdoc
