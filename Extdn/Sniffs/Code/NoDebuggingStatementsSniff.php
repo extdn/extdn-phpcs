@@ -15,12 +15,17 @@ class NoDebuggingStatementsSniff implements Sniff
     /**
      * @var string
      */
-    protected $message = 'Debugging statements should not be kept in production code.';
+    private $message = 'Debugging statements should not be kept in production code.';
 
     /**
      * @var int
      */
-    protected $severity = 8;
+    private $severity = 8;
+
+    /**
+     * @var string 
+     */
+    private $url = 'https://github.com/extdn/extdn-phpcs/blob/master/Extdn/Sniffs/Code/NoDebuggingStatementsSniff.md';
 
     /**
      * @inheritdoc
@@ -65,6 +70,7 @@ class NoDebuggingStatementsSniff implements Sniff
         if ($token['type'] == 'T_EXIT' && in_array($token['content'], $exitFunctions)) {
             $message = $this->message;
             $message .= sprintf(' Function "%s()" was found.', $token['content']);
+            $message .= ' See '.$this->url;
             $phpcsFile->addWarning($message, $stackPtr, $token['content']);
             return true;
         }
@@ -73,6 +79,7 @@ class NoDebuggingStatementsSniff implements Sniff
         if ($token['type'] == 'T_STRING' && in_array($token['content'], $debuggingFunctions)) {
             $message = $this->message;
             $message .= sprintf(' Function "%s()" was found.', $token['content']);
+            $message .= ' See '.$this->url;
             $phpcsFile->addWarning($message, $stackPtr, $token['content']);
             return true;
         }
