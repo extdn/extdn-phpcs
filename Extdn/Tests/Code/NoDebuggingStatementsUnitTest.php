@@ -20,6 +20,6 @@ class NoDebuggingStatementsUnitTest extends AbstractSniffUnitTest
      */
     public function getWarningList()
     {
-        return [8 => 1];
+        return [4 => 1];
     }
 }
