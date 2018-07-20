@@ -15,7 +15,7 @@ class NoDebuggingStatementsSniff implements Sniff
     /**
      * @var string
      */
-    protected $message = 'No debugging statements should be added to production code.';
+    protected $message = 'Debugging statements should not be kept in production code.';
 
     /**
      * @var int
