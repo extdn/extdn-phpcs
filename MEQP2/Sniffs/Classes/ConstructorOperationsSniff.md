@@ -21,7 +21,8 @@ class Foo
 ```
 
 Any other logic than these dependency assignment operators should be excluded from the constructor. Having additional logic in
-the constructor makes it harder to debug and test the class.
+the constructor makes it harder to debug and test the class. Note that you can't know for certain in which stage of the application initialization
+your class is being instantiated. The additional constructor logic might lead to performance issues and/or hard-to-find bugs.
 
 ## How it works
 This rule checks the constructor code to see if any other operators than `a = b` is used. If so, a warning is generated.
