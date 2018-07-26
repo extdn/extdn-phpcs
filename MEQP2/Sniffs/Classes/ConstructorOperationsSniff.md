@@ -27,6 +27,4 @@ the constructor makes it harder to debug and test the class.
 This rule checks the constructor code to see if any other operators than `a = b` is used. If so, a warning is generated.
 
 ## How to fix
-Move other logic to another method. In some cases, this could be `init()` or `_construct()` method that is already created by
-Magento for this purpose. Otherwise, you will need to create such a method yourself. Alternatively, try to add additional
-constructor arguments (like boolean flags) to add configurable behaviour to your class.
+Move non-DI logic to another method. Try to add additional constructor arguments (like boolean flags) to add configurable behaviour to your class.
