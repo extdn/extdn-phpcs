@@ -24,7 +24,7 @@ Any other logic than these dependency assignment operators should be excluded fr
 the constructor makes it harder to debug and test the class.
 
 ## How it works
-This rule checks the constructor code to see if any other operators than `a + b` is used. If so, a warning is generated.
+This rule checks the constructor code to see if any other operators than `a = b` is used. If so, a warning is generated.
 
 ## How to fix
 Move other logic to another method. In some cases, this could be `init()` or `_construct()` method that is already created by
