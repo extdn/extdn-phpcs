@@ -4,13 +4,13 @@
 
 ### Introduction
 There are already many PHP CodeSniffer rules out there to aid in Magento 2 development:
-- https://github.com/magento/marketplace-eqp
-- https://github.com/magento-ecg/coding-standard
+- Magento core ruleset (in folder `dev/tests/static/framework/Magento`)
+- [Magento Extension Quality Program](https://github.com/magento/marketplace-eqp) (in short: MEQP)
+- [Magento Expert Consultancy Group](https://github.com/magento-ecg/coding-standard) (in short: ECG)
 - PSR-1, PSR-2, possibly PSR-12
 
-However, some best practices still need to be integrated. Like not using the Object Manager in PHTML
-templates, not using `setTemplate` in Blocks and using namespaced classes for Virtual Types. This
-repository forms an effort to come up with more advanced rulesets than there currently are.
+However, some best practices still need to be integrated and/or some rules do need to be improved. This
+repository forms an effort to come up with more advanced rulesets than there currently are. Additionally, one of the underlying goals is to create rules that fit Magento core, Magento third party extensions and Magento implements, while they all have different needs.
 
 ### Usage
 
@@ -35,6 +35,8 @@ We need help in the following areas:
 - Creation of new PHPCS rules (see below **How to contribute**)
 - Braindumps on where PHPCS lacks and other tools might come in more handy (PhpStan, Phan)
 - Discussions on new rules (through periodic hangouts or discussions per GitHub Issue)
+
+Please note that you are also welcome to contribute to the Magento rulesets directly (core, MEQP, ECG - see links above). The more rules can be created, the higher the quality can become.
 
 ## How to contribute
 
