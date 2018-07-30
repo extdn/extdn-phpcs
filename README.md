@@ -13,7 +13,6 @@ However, some best practices still need to be integrated and/or some rules do ne
 repository forms an effort to come up with more advanced rulesets than there currently are. Additionally, one of the underlying goals is to create rules that fit Magento core, Magento third party extensions and Magento implements, while they all have different needs.
 
 ### Usage
-
 To install this package, go to your Magento 2 root and use the following:
 
     composer require extdn/phpcs:dev-master
@@ -36,17 +35,16 @@ We need help in the following areas:
 - Braindumps on where PHPCS lacks and other tools might come in more handy (PhpStan, Phan)
 - Discussions on new rules (through periodic hangouts or discussions per GitHub Issue)
 
-Please note that you are also welcome to contribute to the Magento rulesets directly (core, MEQP, ECG - see links above). The more rules can be created, the higher the quality can become.
+Please note that you are also welcome to contribute to the Magento rulesets directly (core, MEQP, ECG - see links above). Likewise, we will try to get ExtDN rules into Magento rulesets as well, which is part of this ExtDN project.
 
 ## How to contribute
-
 Any contribution is welcome. However, don't start coding just yet. Make sure first that the work is worth the effort.
 
 1) Add a new issue under **Issues** to address new rulesets that are needed or report other issues.
 
 2) Once the creation of the new rule has been accepted by adding a label `Accepted` under **Issues**, we're good to go.
 
-3) If a similar rule already exists in the Magento ECG standards and/or Magento Marketplace standards, simply try to include this rule within the ExtDN ruleset.
+3) If a similar rule already exists in the core or MEQP or ECG, simply try to include this rule within the ExtDN ruleset.
 
 4) If no rule exists yet, let's create it. As an example, you can use the `SetTemplateInBlockSniff` within the folder `Extdn/Sniffs/Blocks`. It can be tested upon a sample file under `Extdn/Samples/Blocks`:
 
@@ -67,7 +65,7 @@ Some important labels, used for Github issues:
 - `on agenda of hangout`: The rule/issue will be discussed in the next community hangout
 
 ## How to create a Sniffer Rule
-@todo: Fill in the gaps
+We recommend to get started by creating a couple of sniffs for your own. The official [PHPCS wiki](https://github.com/squizlabs/PHP_CodeSniffer/wiki) already gives good information. Likewise, the other sniffs in our repos (and the repos of Magento) will give lots of samples anyway.
 
 ## Testing
 All rules should be accompanied with tests.
