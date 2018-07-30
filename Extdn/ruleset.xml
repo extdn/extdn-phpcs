@@ -7,6 +7,8 @@
         <exclude-pattern>*.php</exclude-pattern>
     </rule>
     <rule ref="Extdn.Blocks.SetTemplateInBlock"/>
+    <rule ref="Extdn.Blocks.DeprecatedParents"/>
     <rule ref="Extdn.Classes.StrictTypes"/>
+    <rule ref="Extdn.Classes.ObjectManager"/>
     <rule ref="Extdn.Templates.TemplateObjectManager"/>
 </ruleset>
