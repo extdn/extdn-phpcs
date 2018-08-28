@@ -50,6 +50,10 @@ class DeprecatedParentsSniff implements Sniff
         $class = Reflection::getClass($className);
         $parentClass = $class->getParentClass();
 
+        if (!$parentClass) {
+            return;
+        }
+
         foreach ($this->getDeprecatedClasses() as $deprecatedClass) {
             if ($parentClass->getName() !== $deprecatedClass['class']) {
                 continue;
