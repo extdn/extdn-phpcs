@@ -43,7 +43,9 @@ class DeprecatedParentsSniff implements Sniff
         }
 
         // Make sure to load the file itself, so that autoloading can be skipped
-        include_once($phpcsFile->getFilename());
+        if (!class_exists($className)) {
+            include_once($phpcsFile->getFilename());
+        }
 
         $class = Reflection::getClass($className);
         $parentClass = $class->getParentClass();
