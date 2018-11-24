@@ -3,8 +3,7 @@
 The Object Manager is responsible to create concrete objects for a required interface, and to generate code e.g. for adding plugins, factories, proxies.
 It is used transparently by requesting a class/interface name as constructor dependency or in layout XML.
 
-You can use it directly with `ObjectManager::getInstance()->get(SomeInterface::class)` and `ObjectManager::getInstance()->create(SomeInterface::class)`,b
-but this is not encouraged.
+You can use it directly with `ObjectManager::getInstance()->get(SomeInterface::class)` and `ObjectManager::getInstance()->create(SomeInterface::class)`, but this is not encouraged.
 
 ## Reasoning
 Magento offers an extensive system for dependency injection which allows us to access and create objects. It also makes it
