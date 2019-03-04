@@ -28,6 +28,11 @@ Once installed, you can run PHPCS from the command-line to analyse your code `XY
     vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn app/code/XYZ
     vendor/bin/phpcs --standard=./vendor/extdn/phpcs/Extdn vendor/XYZ
 
+If you have a Composer Installer Plugin for PHPCS coding standards (such as https://github.com/Dealerdirect/phpcodesniffer-composer-installer) configured in the project, you can refer to this standard simply by its name:
+
+    vendor/bin/phpcs --standard=Extdn app/code/XYZ
+    vendor/bin/phpcs --standard=Extdn vendor/XYZ
+
 ## Where to contribute
 We need help in the following areas:
 - Documentation of existing EQP rules (where each EQP rule could be included in this repository its `ruleset.xml`)

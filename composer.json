@@ -3,6 +3,7 @@
     "description": "A set of PHP_CodeSniffer rules and sniffs.",
     "homepage": "https://github.com/extdn/extdn-phpcs",
     "license": "MIT",
+    "type": "phpcodesniffer-standard",
     "authors": [
         {
             "name": "ExtDN",
